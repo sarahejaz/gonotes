@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+        <meta charset="utf-8">
+        <title>GoNotes</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    </head>
+
+    <body>
+
+        <!--https://world.edu/note-taking-by-hand-a-powerful-tool-to-support-memory/-->
+        <div class="top-div" style="background-image: url({{url_for('static', filename='images/note-taking-with-overlay.jpg')}});">
+            <div class="logo-image">
+                <img src="{{url_for('static', filename='images/gonotes-logo.png')}}" alt="GoNotes logo" style="width: 16%; height: 16%;">
+            </div>
+    
+            <div class="welcome-text">
+                <p style="font-size: 60px;">Welcome to <b>GoNotes</b></p>
+                <p style="font-size: 26px;">Providing you with important, easy to understand notes of your lectures</p>
+                <br><br>
+            </div>
+
+        </div>
+
+        <div class="description">
+            <p style="font-size: 24px;">
+                GoNotes combines the important features of <b>audio</b> with the important features of <b>text</b> to give you precise, accurate notes.
+                GoNotes also highlights key points and key terms to help you grasp the crux of the lecture.
+            </p>
+        </div>
+
+
+        <br><br><br>
+
+        <div class="get-started">
+            <button type="button" class="btn btn-primary" style="background-color: #f04e5e; border: none; width: 260px; height: 80px; font-size: 30px;"
+            onclick="window.open('/get-youtube-link', '_self');">
+              Get Started
+            </button>
+        </div>
+
+
+        <br><br><br><br>
+
+        <footer style="background-color: #c4d1d1;
+        padding: 10px 10px 0px 10px;
+        bottom: 0;
+        width: 100%; height:38px;">
+            <p>© Sarah Ejaz, Areej Fatima, Sher Bano. 2021.</p>
+        </footer>
+
+    </body>
+</html>
