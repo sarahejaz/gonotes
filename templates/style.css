@@ -1,0 +1,29 @@
+/* Universal Body selector! Use this to set a standard */
+* {
+    font-family: "Montserrat";
+    text-align: center;
+}
+
+.top-div {
+    background-image: url('images/note-taking-with-overlay.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.logo-image {
+    padding-top: 70px;
+}
+
+.welcome-text {
+    padding-top: 40px;
+    color: white;
+}
+
+.description {
+    padding-top: 60px;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+

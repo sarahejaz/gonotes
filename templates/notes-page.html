@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <link rel="stylesheet" href= "{{ url_for('static',filename='styles/style.css') }}">
+        <meta charset="utf-8">
+        <title>Notes</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    </head>
+
+    <body style="background-color: #fdfcfc;">
+
+        
+        <div class="key-words">
+            <h2 style="padding-top: 45px; font-size: 30px;"><b>Keywords</b></h2>
+                <ul class="list-of-key-words">
+                  {% for kw in listofkeywords %}
+                      <li class="key-word-box">{{ kw }}</li>
+                  {% endfor %}
+                </ul>
+                <form method="post" action="{{ url_for('notes_with_keywords')}}">
+                  <button type="submit" class="btn btn-danger" style="border: none; background-color: #3f4764; font-size: 16px; padding: 10px 18px; margin-top: 30px;">Get keywords</button>
+                </form>
+
+        </div>
+
+        <div class="topnav">
+            <img src="{{url_for('static', filename='images/gonotes-logo.png')}}" alt="GoNotes logo" style="float: left; width: 6%; height: 100%; padding-left: 9px; margin-left: 28px; ">
+            <h4 style="display: inline; float: left; padding-left: 20px; padding-top: 22px;">GoNotes</h4>
+            <a href="{{ url_for('help') }}">Help</a>
+            <a href="{{ url_for('getlink') }}">New Lecture Link</a>
+            <a href="{{ url_for('notes') }}" class="active">Notes</a>
+            <a href="{{ url_for('full_transcription') }}">Full Transcription</a>
+        </div>
+
+        <br><br>
+
+        <div class="notes">
+            <div style="text-align: left; padding-top: 40px;">
+                <h2 style="text-align: left; font-size: 40px; line-height: 58px;"><b>Computer Networking in the System</b></h2>
+                <div style="padding-top: 3px;">
+                    <p style="font-size: 20px; text-align: left; line-height: 29px;">
+                      <ul style="font-size: 20px; text-align: left; line-height: 29px;">
+                        {% for n in display_notes %}
+                            <li style="font-size: 20px; text-align: left; line-height: 29px;">{{ n }}</li>
+                        {% endfor %}
+                      </ul>
+                    </p>
+                </div>
+
+                <br><br>
+
+                <div style="text-align: center">
+                    <iframe width="600" height="395"
+                    src={{ytlink_embed}}>
+                    </iframe>
+                </div>
+
+                <br><br><br>
+
+            </div>
+        </div>
+
+        
+
+    </body>
+</html>

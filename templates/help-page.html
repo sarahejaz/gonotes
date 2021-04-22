@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <link rel="stylesheet" href= "{{ url_for('static',filename='styles/style.css') }}">
+        <meta charset="utf-8">
+        <title>Help</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    </head>
+
+    <body style="background-color: #fdfcfc;">
+
+
+        <div class="topnav">
+            <img src="{{url_for('static', filename='images/gonotes-logo.png')}}" alt="GoNotes logo" style="float: left; width: 6%; height: 100%; padding-left: 9px; margin-left: 28px; ">
+            <h4 style="display: inline; float: left; padding-left: 20px; padding-top: 22px;">GoNotes</h4>
+            <a href="{{ url_for('help') }}" class="active">Help</a>
+            <a href="{{ url_for('getlink') }}">New Lecture Link</a>
+            <a href="{{ url_for('notes') }}">Notes</a>
+            <a href="{{ url_for('full_transcription') }}">Full Transcription</a>
+        </div>
+
+        <br><br>
+
+        <div class="help-background">
+            <div style="text-align: left; padding-top: 40px; padding-left: 15px; padding-right: 15px;">
+                <h2 style="text-align: left; font-size: 40px; line-height: 58px;"><b>Help</b></h2>
+                <div style="padding-top: 8px;">
+                    <h3 style="text-align: left; font-size: 30px;"><b>Q. How does GoNotes work?</b></h3>
+                    <p style="font-size: 20px; text-align: left; line-height: 29px; padding-top: 20px;">
+                        Good question! GoNotes first transcribes the video lecture. Words that are significant in the lecture, called <i>keywords</i>, are extracted. 
+                        Then, the important parts of the lecture are extracted using textual features. After that, the amplitudes and frequencies of those important 
+                        parts are observed and are used to locate other parts of the lecture that have similar amplitudes and frequencies. Thus, the key sentences from 
+                        the text and the important regions from the audio are combined to make notes, which are shorter and can be consumed much faster than the 
+                        lecture in its entirety.
+                    </p>
+                    <h3 style="text-align: left; font-size: 30px; padding-top: 7px;"><b>Q. Why is there a need to analyze the audio?</b></h3>
+                    <p style="font-size: 20px; text-align: left; line-height: 29px; padding-top: 20px;">
+                        That's what our research is focused on, the significance of audio in finding important parts of a lecture. The speaker uses various ways 
+                        to highlight certain points that cannot be captured by the audio. That's why we're using both the audio and the transcribed text 
+                        to find the accentuated parts of the lecture.
+                    </p>
+                    <h3 style="text-align: left; font-size: 30px; padding-top: 7px;"><b>Q. Where did the idea of GoNotes come from?</b></h3>
+                    <p style="font-size: 20px; text-align: left; line-height: 29px; padding-top: 20px;">
+                        We observed how long video lectures tend to be tiresome and most individuals are not able to retain lengthy videos. To cater 
+                        to them, we thought to transcribe the audio of those video lectures and generate notes based on accentuated parts of the lecture. Similarly,
+                        keywords can also be of use as they highlight the main things discussed in the lecture.
+                    </p>
+                    <br><br>
+                </div>
+
+            </div>
+        </div>
+        
+
+    </body>
+</html>

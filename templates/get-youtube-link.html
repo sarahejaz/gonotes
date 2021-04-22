@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <link rel="stylesheet" href= "{{ url_for('static',filename='styles/style.css') }}">
+        <meta charset="utf-8">
+        <title>Video Link</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    </head>
+
+    <body style="height: 100vh; background-color: #fdfcfc;;">
+        <div class="get-link-background">
+            <div class="get-link-top-banner">
+                <h4 style="font-size: 40px; padding-top: 10px;">GoNotes</h4>
+            </div>
+
+            <p style="padding-top: 80px; font-size: 26px;">Enter a Youtube link to a video lecture to get started!</p>
+            <br><br><br><br>
+        
+            <div style="font-size: 20px;">
+                <form action="{{ url_for('getlink')}}" method="post">
+                    
+                    <label for="link" style="padding-right: 20px;">Enter Youtube video link:</label>
+                    <input type="url" id="link" name="link" placeholder="Youtube link..." style="text-align: left; width: 640px;">
+                    <br><br><br><br>
+                    <button type="submit" class="btn btn-danger" style="border: none; background-color: #f39e00; margin-left: 40px; font-size: 24px; padding: 10px 18px;">Next >></button>
+            </div>
+        </div>
+    </body>
+</html>
